@@ -327,7 +327,7 @@ void loop() {
     for (int i = LED_COUNT / 2; i < LED_COUNT - numb_LED / 2; i++)
     {
       //int cvet = 30-i * 2;//рандомная двухцветная хуета
-      int cvet = (i - 15) * 2.5;
+      int cvet = (i - LED_COUNT / 2) * 2.5;
       //      strip[i] = CHSV(inkr_2, 255, 255);  // HSV. Увеличивать HUE (цвет)
 
       //////ПРИКОЛЬНЫЙ ГРАДИЕНТ
@@ -366,7 +366,7 @@ void loop() {
     for (int i = LED_COUNT / 2; i > numb_LED / 2; i--)
     {
       //  int cvet =30- i * 2;
-      int cvet = (15 - i) * 2.5;
+      int cvet = (LED_COUNT / 2 - i) * 2.5;
       //   strip[i] = CHSV(inkr_2, 255, 255);  // HSV. Увеличивать HUE (цвет)
       //////ПРИКОЛЬНЫЙ ГРАДИЕНТ
       switch (dfg) {
