@@ -1,4 +1,4 @@
-#include "FastLED.h"
+#include <FastLED.h>
 #include <SoftwareSerial.h>
 #include "GyverButton.h"
 
@@ -10,12 +10,12 @@
 // Указываем, какое количество пикселей у нашей ленты.
 #define LED_COUNT 60
 // Указываем, к какому порту подключен вход ленты DIN.
-#define LED_PIN 5
+#define LED_PIN 4
 // Создаем переменную strip для управления нашей лентой.
-CRGB strip[LED_COUNT];
+
 
 #define sample 300 //выборка для анализа
-
+CRGB strip[LED_COUNT];
 
 ///////////////переменные//////////
 int val = 0;
