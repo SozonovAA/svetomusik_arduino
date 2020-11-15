@@ -488,7 +488,7 @@ void loop() {
   if (ircomand == 8) { //постоянный свет с блютуза
     for (int i = 0; i < LED_COUNT; i++)
     {
-      strip[i] = CHSV(mode [3] , 255-mode [4] , mode [5]* yark_LED*0.8 );   // HSV. Увеличивать HUE (цвет)
+      strip[i] = CHSV(mode [3], mode [4] , mode [5]* yark_LED*0.8 );   // HSV. Увеличивать HUE (цвет)
     }
   }
   // counter меняется от 0 до 255 (тип данных byte)
@@ -588,6 +588,7 @@ int pars_bluet() {
       flag_rezhim_1 = 0;
       ircomand = 8;
       mode [3] = buff [2] * 100 + buff [3] * 10 + buff [4] * 1;
+      mode [3] = (mode [3]* 0.71);
       mode [4] = buff [5] * 100 + buff [6] * 10 + buff [7] * 1;
       mode [5] = buff [8] * 100 + buff [9] * 10 + buff [10] * 1;
     }
