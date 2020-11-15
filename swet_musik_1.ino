@@ -10,7 +10,7 @@
 // Указываем, какое количество пикселей у нашей ленты.
 #define LED_COUNT 30
 // Указываем, к какому порту подключен вход ленты DIN.
-#define LED_PIN 4
+#define LED_PIN 5
 // Создаем переменную strip для управления нашей лентой.
 CRGB strip[LED_COUNT];
 
@@ -488,7 +488,7 @@ void loop() {
   if (ircomand == 8) { //постоянный свет с блютуза
     for (int i = 0; i < LED_COUNT; i++)
     {
-      strip[i] = CHSV(mode [3] , mode [4] , mode [5]* yark_LED*0.8 );   // HSV. Увеличивать HUE (цвет)
+      strip[i] = CHSV(mode [3] , 255-mode [4] , mode [5]* yark_LED*0.8 );   // HSV. Увеличивать HUE (цвет)
     }
   }
   // counter меняется от 0 до 255 (тип данных byte)
